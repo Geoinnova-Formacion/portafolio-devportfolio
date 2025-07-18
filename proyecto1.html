@@ -107,6 +107,19 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+	<script>
+  window.addEventListener("load", function () {
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const target = document.querySelector(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 200); // pequeño retardo para que todo esté renderizado
+    }
+  });
+</script>
 </body>
 
 </html>
