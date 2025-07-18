@@ -25,7 +25,7 @@
         </div>
         <ul id="menu" class="shadow">
             <li>
-                <a href="index.html?scroll=projects">← Volver a proyectos</a>
+               <a href="index.html#projects" onclick="window.location.href='index.html'">← Volver al inicio</a>
             </li>
         
         </ul>
@@ -107,19 +107,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
-	<script>
-  window.addEventListener("load", function () {
-    const params = new URLSearchParams(window.location.search);
-    const sectionToScroll = params.get("scroll");
-
-    if (sectionToScroll) {
-      const target = document.getElementById(sectionToScroll);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
-  });
-</script>
+	
 </body>
 
 </html>
