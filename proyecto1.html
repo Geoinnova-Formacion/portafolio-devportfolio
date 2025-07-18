@@ -108,15 +108,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
 	<script>
+  function scrollToHashTarget(hash) {
+    const target = document.querySelector(hash);
+
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // Reintenta hasta 10 veces
+      let retries = 10;
+      const waitForElement = () => {
+        const t = document.querySelector(hash);
+        if (t) {
+          t.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else if (retries > 0) {
+          retries--;
+          requestAnimationFrame(waitForElement);
+        }
+      };
+      waitForElement();
+    }
+  }
+
   window.addEventListener("load", function () {
     const hash = window.location.hash;
     if (hash) {
-      setTimeout(() => {
-        const target = document.querySelector(hash);
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }, 200); // pequeño retardo para que todo esté renderizado
+      scrollToHashTarget(hash);
     }
   });
 </script>
