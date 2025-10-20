@@ -24,10 +24,10 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease;
 }
 
 #to-top:hover {
-    background-color: #007bff;
+    background-color: #15496E;
 }
