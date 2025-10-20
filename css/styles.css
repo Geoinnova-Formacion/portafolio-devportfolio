@@ -14,7 +14,7 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #202124; /* Cambia al color que quieras */
+    background-color: #15496E; /* Cambia al color que quieras */
     color: white;
     padding: 12px 15px;
     border-radius: 50%;
@@ -29,5 +29,5 @@
 }
 
 #to-top:hover {
-    background-color: #15496E;
+    background-color: #202124;
 }
