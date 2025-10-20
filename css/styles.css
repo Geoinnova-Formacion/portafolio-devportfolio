@@ -14,7 +14,7 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #007bff; /* Cambia al color que quieras */
+    background-color: #202124; /* Cambia al color que quieras */
     color: white;
     padding: 12px 15px;
     border-radius: 50%;
@@ -24,10 +24,10 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
     transition: background-color 0.3s ease;
 }
 
 #to-top:hover {
-    background-color: #0056b3;
+    background-color: #007bff;
 }
